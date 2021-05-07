@@ -25,11 +25,13 @@ def params():
     return "El parametro 1 y 2 son : {} y {}".format(p1,p2) # imprimos parametros
 
 
+
+## Podemos jugar con el redireccionamiento de las paginas y rutas con los condicionales
 # ruta/libro/python
 # leer los item de la ruta
 @app.route('/ruta/') # que se ejecute aún sin argumento
 @app.route('/ruta/<nombre>/') # agregar entre diamantes
-@app.route('/ruta/<nombre>/<int:edad>') 
+@app.route('/ruta/<nombre>/<int:edad>') # con <int: > podemos definirlo como numero entero
 # los valores son de tipo string 
 def ruta(nombre=None,edad=None): # colocarlo como parametro
     if nombre and edad==None:
