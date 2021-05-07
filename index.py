@@ -1,12 +1,12 @@
 from flask import Flask
 from flask import request
-
+from flask import render_template # renderizar template
 
 app = Flask(__name__) 
 
 
 @app.route('/') 
-def index():
+def root():
     return "Pagina indice con FLASK" 
 
 
@@ -40,6 +40,12 @@ def ruta(nombre=None,edad=None): # colocarlo como parametro
         return "La ruta escrita fue {} con edad = {}".format(nombre,edad)
     else:
         return "estas en la 'ruta' sola"
+
+
+# Renderizar templates
+@app.route('/index') 
+def index():
+    return render_template('index.html') # la carpeta debe ser llamada "templates"
 
 
 
