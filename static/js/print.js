@@ -1,0 +1,1 @@
+console.log('Hola Mundo desde archivo estatico en pagina en python desde flask')

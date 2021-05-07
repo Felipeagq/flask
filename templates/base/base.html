@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body>
+    <h1 style="background-color: aqua; text-align: center;" >Estas navegando en la paginas de Felipe creada en Python con FLASK</h1>
+    {% block content %} {% endblock %}
+    <p style="background-color: aqua;text-align: center;">Fin de la plantilla</p>
+    <img src="{{url_for('static',filename='img/rose.jpeg')}}" >
+    <script src="{{url_for('static',filename='js/print.js')}}"></script>
+</body>
+</html>

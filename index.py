@@ -3,6 +3,7 @@ from flask import request
 from flask import render_template # renderizar template
 
 app = Flask(__name__) 
+# app = Flask(__name__, template_folder='Ruta/carpeta/templates')  para indicar otra ruta de los templates
 
 
 @app.route('/') 
@@ -44,10 +45,18 @@ def ruta(nombre=None,edad=None): # colocarlo como parametro
 
 # Renderizar templates
 @app.route('/index') 
-def index():
-    return render_template('index.html') # la carpeta debe ser llamada "templates"
+@app.route('/index/<nombre>') 
+@app.route('/index/<nombre>/<edad>') 
+def index(nombre=None,edad=None):
+    # el diccionario como en Django, no sirve
+    return render_template('index.html',nombre=nombre,edad=edad) # la carpeta debe ser llamada "templates"
+# y estar al mismo nivel del presente archivo .py
 
 
+
+@app.route('/blog1') 
+def blog1():
+    return render_template('blog1.html')
 
 
 if __name__ == '__main__':
