@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 from flask import render_template # renderizar template
+import form
 
 app = Flask(__name__) 
 # app = Flask(__name__, template_folder='Ruta/carpeta/templates')  para indicar otra ruta de los templates
@@ -53,10 +54,15 @@ def index(nombre=None,edad=None):
 # y estar al mismo nivel del presente archivo .py
 
 
+@app.route('/blog1/<item>') 
+def blog1(item=None):
+    return render_template('blog1.html',item=item)
 
-@app.route('/blog1') 
-def blog1():
-    return render_template('blog1.html')
+
+@app.route('/blog2') 
+def blog2():
+    comment_form = form.CommentForm()
+    return render_template('blog2.html', form = comment_form)
 
 
 if __name__ == '__main__':

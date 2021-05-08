@@ -9,7 +9,9 @@
 </head>
 <body>
     <h1 style="background-color: aqua; text-align: center;" >Estas navegando en la paginas de Felipe creada en Python con FLASK</h1>
+    
     {% block content %} {% endblock %}
+    
     <p style="background-color: aqua;text-align: center;">Fin de la plantilla</p>
     <img src="{{url_for('static',filename='img/rose.jpeg')}}" >
     <script src="{{url_for('static',filename='js/print.js')}}"></script>

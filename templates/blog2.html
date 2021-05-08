@@ -6,7 +6,11 @@
     <h4>Esta es la publicación del primer blog</h4>
     <p>El primer blog publicado será sobre la terminologia de machine learning</p>
 
-    {% from "_macro.html" import show_list %}
-    {{ show_list(item)}}
+    {% from "_macro.html" import render_field %}
+    <form>
+        {{render_field(form.username)}}
+        {{render_field(form.email)}}
+        {{render_field(form.comment)}}
+    </form>
 
 {% endblock  %}
