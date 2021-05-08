@@ -1,7 +1,14 @@
 from wtforms import Form
 from wtforms import StringField, TextField
 from wtforms.fields.html5 import EmailField
-from wtforms import validators
+
+from wtforms import validators, HiddenField
+
+
+def length_honeypot(form, field):
+    if len(field.data)>0:
+        raise validators.ValidationError('El campo debe estar vacio')
+
 
 class CommentForm(Form):
     
@@ -19,4 +26,8 @@ class CommentForm(Form):
                         ])
 
     comment = TextField('Comentario')
+    
+    honeypot = HiddenField('',[
+        length_honeypot
+    ])
 

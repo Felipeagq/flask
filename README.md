@@ -36,6 +36,13 @@
 
 
 
+# Agregar validación propia:
+![alt text](https://raw.github.com/Felipeagq/flask/master/imagenes/val_p1.png)
+![alt text](https://raw.github.com/Felipeagq/flask/master/imagenes/val_p2.png)
+![alt text](https://raw.github.com/Felipeagq/flask/master/imagenes/val_p3.png)
+
+
+
 
 
 

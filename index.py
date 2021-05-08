@@ -66,7 +66,8 @@ def blog2():
         print(comment_form.username.data)
         print(comment_form.email.data)
         print(comment_form.comment.data)
-        
+    else:
+        print('Error en el formulario')
     return render_template('blog2.html', form = comment_form)
 
 
