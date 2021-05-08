@@ -7,10 +7,11 @@
     <p>El primer blog publicado será sobre la terminologia de machine learning</p>
 
     {% from "_macro.html" import render_field %}
-    <form>
+    <form name="SentMessage" id="ContactForm" method="POST">
         {{render_field(form.username)}}
         {{render_field(form.email)}}
         {{render_field(form.comment)}}
+        <input type="submit" value="Send">
     </form>
 
 {% endblock  %}

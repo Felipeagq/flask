@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import request
 from flask import render_template # renderizar template
-import form
+import form 
 
 app = Flask(__name__) 
 # app = Flask(__name__, template_folder='Ruta/carpeta/templates')  para indicar otra ruta de los templates
@@ -59,9 +59,14 @@ def blog1(item=None):
     return render_template('blog1.html',item=item)
 
 
-@app.route('/blog2') 
+@app.route('/blog2',methods = ['GET','POST']) # ambos metodos puedes acceder
 def blog2():
-    comment_form = form.CommentForm()
+    comment_form = form.CommentForm(request.form)
+    if request.method == 'POST' and comment_form.validate(): # el formulario solo funciona con POST
+        print(comment_form.username.data)
+        print(comment_form.email.data)
+        print(comment_form.comment.data)
+        
     return render_template('blog2.html', form = comment_form)
 
 
