@@ -28,7 +28,7 @@
 
 # Validar formularios:
 - Para crear el validador de formularios hay  importar "from wtforms import validators" en el archivo "form.py" y colocar los parametros de validación.
-![alt text](https://raw.github.com/Felipeagq/flask/master/imagenes/val_from1.png)
+![alt text](https://raw.github.com/Felipeagq/flask/master/imagenes/val_form1.png)
 - Luego para implementar la validación, en el archivo "index.py", agregar
 ![alt text](https://raw.github.com/Felipeagq/flask/master/imagenes/val.png)
 - Luego en "_macro.html", debemos validar si hay errores.
