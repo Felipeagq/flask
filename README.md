@@ -16,7 +16,7 @@
 
 # Formulario en Flask.
 - crear un archivo "form.py".
-![alt text](https://raw.github.com/Felipeagq/flask/master/imagenes/form1.png)
+![alt text](https://raw.github.com/Felipeagq/flask/master/imagenes/from1.png)
 
 
 
